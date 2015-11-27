@@ -1,0 +1,19 @@
+<template name="surplusComponents">
+<head>
+  <title>surplus</title>
+</head>
+
+{{ > navbar }}
+
+<body>
+  <h2>Components</h2>
+      <ul>
+  	   {{#each surplusComponents}}
+          <li>
+  		      <a href='/componentDetail/{{_id}}'>{{name}}</a>
+  		    </li>
+  	   {{/each}}
+      </ul>
+      <p></p>
+  </body>
+</template>

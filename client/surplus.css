@@ -1,0 +1,20 @@
+/* CSS declarations go here */
+
+.navbar-brand{
+	padding-top: 1px;
+	padding-left: 1px;
+}
+.btn-danger{
+	float: right;
+}
+.btn-primary{
+	background-color: black;
+	border: 0 none;
+
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+	background-color: gray;
+}
+.btn-primary:active, .btn-primary:active:focus{
+	background-color: darkgray;
+}

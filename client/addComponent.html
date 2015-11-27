@@ -1,0 +1,45 @@
+<template name="addComponent">
+	<head>
+  	<title>surplus</title>
+	</head>
+
+	{{ > navbar }}
+
+	<body>
+		<h2>Add New Component</h2>
+		<form class="new-component">
+			<div class="form-group">
+				<label>Component Name:</label>
+				<input class="form-control" name="compName" placeholder="Name" required>
+
+				<label>Part Number:</label>
+				<input class="form-control" name="compPartNum" placeholder="Part Number">
+
+				<label>Category:</label>
+				<select class="form-control" name="compCat" placeholder="Category">
+					<option>Electrical</option>
+					<option>Hardware</option>
+					<option>Motors</option>
+					<option>Pneumatics</option>
+					<option>Other</option>
+				</select>
+
+				<label>Manufacturer:</label>
+				<input class="form-control" name="compMan" placeholder="Manufacturer">
+
+				<label>Description:</label>
+				<textarea class="form-control" name="compDescription" placeholder="Description"></textarea>
+
+				<label>Photo:</label>
+				<!-- <p><input type="button" class="capture" value="Take Photo"></p> -->
+  		
+  				<a type="button" class="btn btn-primary" href="/">Cancel</a>
+  				<button type="submit" class="btn btn-success">Add component</button>
+  			</div>
+  		</form>
+  		<p><img src="{{photo}}"></p>
+  		<!-- <button type="button" class="btn btn-success">Upload Picture</button> -->
+
+  		<p></p>
+  	</body>
+</template>

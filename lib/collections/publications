@@ -1,0 +1,2 @@
+Meteor.publish(“images”, function(){ return Images.find(); });
+Meteor.publish("suplusComponents", function(){ return SurplusComponents.find();});

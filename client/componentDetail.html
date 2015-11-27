@@ -1,0 +1,29 @@
+<template name="componentDetail">
+	<head>
+  		<title>surplus</title>
+	</head>
+
+	{{ > navbar }}
+
+	<body>
+	<h2>Component Details</h2>
+  		<ul>
+  		{{#with component}}
+  			<li>Name: {{name}}</li>
+  			<li>Part Number: {{partNumber}}</li>
+  			<li>Category: {{category}}</li>
+  			<li>Manufacturer: {{manufacturer}}</li>
+  			<li>Description: {{description}}</li>
+  			<a class="btn btn-warning" href='/editComponent/{{_id}}'>Edit component</a>
+        {{ebaySearchResults}}
+    	{{/with}}
+  		</ul>
+  		<p></p>
+  <h4>Similar Items on eBay</h4>
+    <div id="results"></div>
+
+  
+
+
+	</body>
+</template>

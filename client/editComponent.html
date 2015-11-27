@@ -1,0 +1,53 @@
+<template name="editComponent">
+	<head>
+  		<title>surplus</title>
+	</head>
+
+	{{ > navbar }}
+
+	<body>
+	<h2>Edit Component</h2>
+		{{#with component}}
+  		<form class="edit-component" id="editComponent" data-apiComponentId="{{apiComponentId}}" data-id="{{_id}}">
+			<div class="form-group">
+				<label>Component Name:</label>
+				<input class="form-control" name="compName" value="{{name}}" required>
+
+				<label>Part Number:</label>
+				<input class="form-control" name="compPartNum" value="{{partNumber}}">
+
+				<label>Category:</label>
+				<select class="form-control" name="compCat">
+					<option selected="{{selectCategory "Electrical"}}">Electrical</option>
+					<option selected="{{selectCategory "Hardware"}}">Hardware</option>
+					<option selected="{{selectCategory "Motors"}}">Motors</option>
+					<option selected="{{selectCategory "Pneumatics"}}">Pneumatics</option>
+					<option selected="{{selectCategory "Other"}}">Other</option>
+				</select>
+
+				<label>Manufacturer:</label>
+				<input class="form-control" name="compMan" value="{{manufacturer}}">
+
+				<label>Description:</label>
+				<textarea class="form-control" name="compDescription" value="{{description}}"></textarea>
+
+				<label>Photo:</label>
+				<p><input type="button" class="capture" value="Take Photo"></p>
+  		
+  				<a type="button" class="btn btn-primary" href="/">Cancel</a>
+  				<button type="submit" class="btn btn-success" id="updateComponent">Update</button>
+  				<button class="btn btn-danger" id="deleteComponent">Delete</button>
+  			</div>
+  		</form>
+  			<img src="{{photo.url}}">
+  		<!-- <img src="{{photo}}"> -->
+  		{{/with}}
+  		<!-- <img src={{component.image}}> -->
+  		<!-- {{photo}} -->
+  		<!-- <button type="button" class="btn btn-success">Save Picture</button> -->
+  		<!-- {{#each allPhotos}}
+  			<img src="{{this.url}}">
+  		{{/each}} -->
+  		<p></p>
+	</body>
+</template>
